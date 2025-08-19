@@ -1,0 +1,1 @@
+<div className='py-10 prose prose-slate max-w-3xl text-right'><h1>الخصوصية (نموذج)</h1><p>لا حفظ أموال. الصور تُعتم قبل الرفع. هذا نموذج واجهة فقط.</p></div>

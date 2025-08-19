@@ -1,0 +1,30 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Base typography & spacing for readability */
+@layer base {
+  html { font-size: 17px; }
+  body { @apply text-slate-900; }
+}
+
+/* Reusable UI tokens */
+.card { @apply rounded-2xl bg-white/85 backdrop-blur border border-slate-200/70 shadow-brand transition hover:shadow-lg; }
+.btn { @apply inline-flex items-center gap-2 rounded-xl px-4 py-2 bg-brand text-white hover:bg-brand-dark active:scale-[.99] transition; }
+.btn-secondary { @apply inline-flex items-center gap-2 rounded-xl px-4 py-2 bg-slate-900 text-white hover:bg-black transition; }
+.btn-ghost { @apply inline-flex items-center gap-2 rounded-xl px-4 py-2 bg-transparent border border-slate-300 hover:bg-slate-50; }
+.badge { @apply inline-flex items-center rounded-full bg-slate-100 text-slate-700 px-3 py-1 text-xs; }
+.input { @apply rounded-xl border px-3 py-2 w-full focus:outline-none focus:ring-2 focus:ring-brand/40; }
+.select { @apply rounded-xl border px-3 py-2 w-full bg-white focus:outline-none focus:ring-2 focus:ring-brand/40; }
+.chip { @apply rounded-full px-3 py-1 border text-sm cursor-pointer hover:bg-slate-50 data-[active=true]:bg-brand data-[active=true]:text-white data-[active=true]:border-brand; }
+
+.gradient-hero {
+  background: radial-gradient(1200px circle at 50% 0%, rgba(0,229,255,0.20), transparent 60%),
+              radial-gradient(500px circle at 10% 10%, rgba(0,151,167,.12), transparent 60%),
+              radial-gradient(500px circle at 90% 10%, rgba(0,151,167,.12), transparent 60%);
+}
+
+/* Sticky quick actions (mobile-friendly) */
+.quick-actions {
+  @apply fixed bottom-3 inset-x-3 md:static md:inset-auto flex gap-2 justify-between bg-white/90 backdrop-blur border border-slate-200 rounded-2xl p-2 shadow-lg z-[60];
+}
